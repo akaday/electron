@@ -50,7 +50,7 @@ Object.defineProperty(BaseWindow.prototype, 'focusable', {
 });
 
 Object.defineProperty(BaseWindow.prototype, 'kiosk', {
-  get: function () { return this.isKiosk(); },
+  get: function () { return this isKiosk(); },
   set: function (kiosk) { this.setKiosk(kiosk); }
 });
 

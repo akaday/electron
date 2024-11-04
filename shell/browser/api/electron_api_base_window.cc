@@ -1,7 +1,3 @@
-// Copyright (c) 2018 GitHub, Inc.
-// Use of this source code is governed by the MIT license that can be
-// found in the LICENSE file.
-
 #include "shell/browser/api/electron_api_base_window.h"
 
 #include <algorithm>
@@ -397,8 +393,8 @@ void BaseWindow::SetFullScreen(bool fullscreen) {
   window_->SetFullScreen(fullscreen);
 }
 
-bool BaseWindow::IsFullscreen() const {
-  return window_->IsFullscreen();
+bool BaseWindow::IsFullScreen() const {
+  return window_->IsFullScreen();
 }
 
 void BaseWindow::SetBounds(const gfx::Rect& bounds,
@@ -1165,7 +1161,7 @@ void BaseWindow::BuildPrototype(v8::Isolate* isolate,
       .SetMethod("restore", &BaseWindow::Restore)
       .SetMethod("isMinimized", &BaseWindow::IsMinimized)
       .SetMethod("setFullScreen", &BaseWindow::SetFullScreen)
-      .SetMethod("isFullScreen", &BaseWindow::IsFullscreen)
+      .SetMethod("isFullScreen", &BaseWindow::IsFullScreen)
       .SetMethod("setBounds", &BaseWindow::SetBounds)
       .SetMethod("getBounds", &BaseWindow::GetBounds)
       .SetMethod("isNormal", &BaseWindow::IsNormal)
